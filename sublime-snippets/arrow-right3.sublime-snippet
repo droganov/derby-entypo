@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+<entypo icon="arrow-right3"${1: size="${2:20}"} />$0
+]]></content>
+	<tabTrigger>entypo</tabTrigger>
+	<scope>text.html</scope>
+</snippet>
