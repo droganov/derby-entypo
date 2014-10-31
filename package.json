@@ -1,0 +1,31 @@
+{
+  "name": "derby-entypo",
+  "description": "",
+  "version": "0.0.0",
+  "main": "./index.js",
+  "keywords": [
+    "derby",
+    "derby-component",
+    "entypo",
+    "icons",
+    "svg"
+  ],
+  "scripts": {
+    "test": "echo 'No tests yet!'; exit(1);"
+  },
+  "author": {
+    "name": "Serge Droganov",
+    "email": "serge@droganov.ru"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "grunt": "^0.4.5",
+    "grunt-bumpup": "^0.6.2",
+    "grunt-tagrelease": "^0.3.3"
+  },
+  "peerDependencies": {
+    "derby": "^0.6.0"
+  }
+}
