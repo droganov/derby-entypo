@@ -18,46 +18,28 @@ module.exports = (grunt) ->
 	grunt.registerTask "default", ->
 		che 			= cheerio.load grunt.file.read("demo/demo.html")
 		symbols			= che "symbol"
+		txml 			= '<snippet>\n
+	<content><![CDATA[\n
+<entypo icon="<%= name %>"${1: size="${2:20}"} />$0\n
+]]></content>\n
+	<tabTrigger>entypo</tabTrigger>\n
+	<scope>text.html</scope>\n
+</snippet>'
 
-		tjs 			= 'module.exports = <%= className %>;\n
-function <%= className %>(){}\n
-<%= className %>.prototype.view = __dirname;\n
-<%= className %>.prototype.init = function(model) {\n
-	model.setNull("size", 20);\n
-}'
-		thtml			= '<index: element="entypo-<%= name %>">\n
-	<figure class="entypo" style="width:{{size}}px; height:{{size}}px">\n
-		<svg class="entypo-icon entypo-<%= name %>" viewBox="0 0 1024 1024">\n
-			<path d="<%= path %>" />\n
-		</svg>\n
-	</figure>'
-
-		grunt.file.delete "icons"
-		grunt.file.mkdir "icons"
-
-		arr = []
+		try
+			grunt.file.delete "sublime-snippets"
+		catch e
+				
+		grunt.file.mkdir "sublime-snippets"
 
 		for s in symbols
 			el 			= cheerio(s)
-
 			name 		= el.attr("id").replace "icon-", ""
-			d 			=
-				name 		: name
-				path 		: el.find("path").attr "d"
-				className 	: "Entypo" + toTitleCase(name.replace(/\-/g, " ")).split(" ").join("")
-
-			dirName 	= "./icons/" + d.name
-			grunt.file.mkdir dirName
-
-			fjs 		= grunt.template.process tjs, {data: d}
-			fhtml 		= grunt.template.process thtml, {data: d}
-
-			grunt.file.write dirName + "/index.js", fjs
-			grunt.file.write dirName + "/index.html", fhtml
-
-			arr.push name
-
-		grunt.file.write "./icons/_list.js", "module.exports = " + JSON.stringify(arr)
+			d =
+				name: name
+			snippet 	= grunt.template.process txml, {data: d}
+			dirName 	= "./sublime-snippets/"
+			grunt.file.write dirName + "/" + name + ".sublime-snippet", snippet
 		console.log "done"
 	
 	grunt.registerTask "release", (type) ->
