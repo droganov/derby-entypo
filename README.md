@@ -9,23 +9,23 @@ There is two usage strategies:
 
 ### 1 Sprite
 Connect the component
-```
+```coffeescript
 app.use require "derby-entypo/sprite"
 ```
 
 Include the sprite
-```
+```html
 <Body:>
 	<entypo-sprite />
 ```
 
 Use pictograms within templates: 
-```
+```html
 <entypo icon="air" size="60" />
 ```
 
 or
-```
+```html
 <entypo icon="brush" />
 ```
 
