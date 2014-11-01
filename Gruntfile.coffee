@@ -10,36 +10,32 @@ module.exports = (grunt) ->
 		bumpup: "package.json"
 		tagrelease: "package.json"
 
-
 	# plugins
 	grunt.loadNpmTasks "grunt-bumpup"
 	grunt.loadNpmTasks "grunt-tagrelease"
 
+	# tasks
 	grunt.registerTask "default", ->
-		che 			= cheerio.load grunt.file.read("demo/demo.html")
-		symbols			= che "symbol"
-		txml 			= '<snippet>\n
-	<content><![CDATA[\n
-<entypo icon="<%= name %>"${1: size="${2:20}"} />$0\n
-]]></content>\n
-	<tabTrigger>entypo</tabTrigger>\n
-	<scope>text.html</scope>\n
-</snippet>'
+		che 				= cheerio.load grunt.file.read("demo/demo.html")
+		symbols				= che "symbol"
 
-		try
-			grunt.file.delete "sublime-snippets"
-		catch e
-				
-		grunt.file.mkdir "sublime-snippets"
+		csprite 	=
+			scope 			: "text/html"
+			completions 	: []
 
 		for s in symbols
 			el 			= cheerio(s)
 			name 		= el.attr("id").replace "icon-", ""
-			d =
-				name: name
-			snippet 	= grunt.template.process txml, {data: d}
-			dirName 	= "./sublime-snippets/"
-			grunt.file.write dirName + "/" + name + ".sublime-snippet", snippet
+
+			d 			=
+				name 		: name
+				trigger 	: name.replace /\-/g, ""
+
+			csprite.completions.push
+				trigger: "entypo|" + d.trigger
+				contents: '<entypo icon="' + d.name + '"${1: size="${2:20}"} />$0'
+
+			grunt.file.write "./sublime-completions/entypo-sprite.sublime-completions", JSON.stringify csprite
 		console.log "done"
 	
 	grunt.registerTask "release", (type) ->
