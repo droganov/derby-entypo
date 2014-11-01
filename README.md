@@ -4,7 +4,7 @@
 ## Usage
 There is two usage strategies:
 
-1. Sprite — when it's OK to 200KB (65 zipped) to derby bundle
+1. Sprite — when it's OK to add 200KB (65 zipped) to the bundle
 2. Inline — when it's OK to `require` each icon manualy
 
 ### 1 Sprite
@@ -19,7 +19,16 @@ Include the sprite
 	<entypo-sprite />
 ```
 
-Use pictograms within templates: `<entypo icon="air" size="60" />` or `<entypo icon="brush" />`
+Use pictograms within templates: 
+```
+<entypo icon="air" size="60" />
+```
+
+or
+```
+<entypo icon="brush" />
+```
+
 
 Default pictogram size is 20×20px. You can find pictogram names in demo/demo.html 
 
