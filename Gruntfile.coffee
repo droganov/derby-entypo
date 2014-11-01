@@ -20,7 +20,7 @@ module.exports = (grunt) ->
 		symbols				= che "symbol"
 
 		csprite 	=
-			scope 			: "text/html"
+			scope 			: "text.html - source - meta.tag, punctuation.definition.tag.begin"
 			completions 	: []
 
 		for s in symbols
@@ -33,7 +33,7 @@ module.exports = (grunt) ->
 
 			csprite.completions.push
 				trigger: "entypo|" + d.trigger
-				contents: '<entypo icon="' + d.name + '"${1: size="${2:20}"} />$0'
+				contents: '<entypo icon="' + d.name + '"${1: size="${2:20}"}${3: title="$4"} />$0'
 
 			grunt.file.write "./sublime-completions/entypo-sprite.sublime-completions", JSON.stringify csprite
 		console.log "done"
