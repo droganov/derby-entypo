@@ -59,6 +59,6 @@ Use pictograms within templates:
 - [d-barchart-vanilla](http://github.com/codeparty/d-barchart-vanilla)
 
 ## Copyright information
-Pictorgam design [Daniel Bruce](//entypo.com/)
-Component coding [Serge Droganov](//droganov.ru)
-Demo [Iconmoon](//icomoon.io)
+- Pictorgam design [Daniel Bruce](//entypo.com/)
+- Component coding [Serge Droganov](//droganov.ru)
+- Demo [Iconmoon](//icomoon.io)
