@@ -1,5 +1,5 @@
 # derby-entypo
-[Entypo](http://entypo.com/) svg pictorgams for [Derby](http://github.com/codeparty/derby) frammework
+[Entypo](http://entypo.com/) svg pictorgams for [Derby](http://github.com/codeparty/derby) framework
 
 ## Usage
 There is two usage strategies:
@@ -33,19 +33,22 @@ or
 Default pictogram size is 20×20px. You can find pictogram names in demo/demo.html 
 
 
----
-The job is in progress
-
-
-## In your app
-```javascript
-// Use component published as module
-app.component(require('d-entypo'));
+### 2 Inline
+Connect styles
+```coffeescript
+app.use require "derby-entypo"
 ```
 
-## In your template
+Connect pictograms (each individually)
+```coffeescript
+app.component require "derby-entypo/inline/air"
+app.component require "derby-entypo/inline/airplane"
+```
+
+Use pictograms within templates: 
 ```html
-<view name="d-entypo"></view>
+<entypo-air size="60" />
+<entypo-airplane />
 ```
 
 ## see also:
@@ -54,3 +57,8 @@ app.component(require('d-entypo'));
 - [d-barchart](http://github.com/codeparty/d-barchart)
 - [d-d3-barchart](http://github.com/codeparty/d-d3-barchart)
 - [d-barchart-vanilla](http://github.com/codeparty/d-barchart-vanilla)
+
+## Copyright information
+Pictorgam design [Daniel Bruce](//entypo.com/)
+Component coding [Serge Droganov](//droganov.ru)
+Demo [Iconmoon](//icomoon.io)
