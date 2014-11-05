@@ -1,4 +1,5 @@
 # derby-entypo
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/droganov/derby-entypo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [Entypo](http://entypo.com/) svg pictorgams for [Derby](http://github.com/codeparty/derby) framework
 
 ## Usage
