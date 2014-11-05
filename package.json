@@ -10,6 +10,10 @@
     "icons",
     "svg"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/droganov/derby-entypo.git"
+  },
   "scripts": {
     "test": "echo 'No tests yet!'; exit(1);"
   },
