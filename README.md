@@ -2,7 +2,7 @@
 [Entypo](http://entypo.com/) svg pictorgams for [Derby](http://github.com/codeparty/derby) framework
 
 ## Installation
-```
+```shell
 npm install derby-entypo
 ```
 
