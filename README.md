@@ -1,6 +1,10 @@
 # derby-entypo
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/droganov/derby-entypo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [Entypo](http://entypo.com/) svg pictorgams for [Derby](http://github.com/codeparty/derby) framework
+
+## Installation
+```
+npm install derby-entypo
+```
 
 ## Usage
 There is two usage strategies:
@@ -52,6 +56,10 @@ Use pictograms within templates:
 <entypo-airplane />
 ```
 
+## Resources
+Sublime text code completions are in `sublime-completions` folder
+Sketch 3 resource file is in `sketch 3 symbols`folder
+
 ## see also:
 - [Official Components Guide](https://github.com/codeparty/derby/blob/master/docs/guides/components.md)
 - [Derby 0.6: Introduction to components](https://github.com/dmapper/derby-tutorials/blob/master/derby4.md)
@@ -63,3 +71,6 @@ Use pictograms within templates:
 - Pictorgam design [Daniel Bruce](//entypo.com/)
 - Component coding [Serge Droganov](//droganov.ru)
 - Demo [Iconmoon](//icomoon.io)
+
+---
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/droganov/derby-entypo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
