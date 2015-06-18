@@ -1,15 +1,16 @@
 {
   "name": "derby-entypo",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Entypo pictogram set for derby.js framework",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "cheerio": "^0.17.0",
     "coffee-script": "^1.8.0",
     "grunt": "^0.4.5",
-    "cheerio": "^0.17.0",
-    "grunt-tagrelease": "^0.3.3",
-    "grunt-bumpup": "^0.6.2"
+    "grunt-bumpup": "^0.6.2",
+    "grunt-release": "^0.12.0",
+    "grunt-tagrelease": "^0.3.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
