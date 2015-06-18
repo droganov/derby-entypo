@@ -8,12 +8,14 @@ module.exports = (grunt) ->
 	grunt.file.defaultEncoding = "utf8"
 	grunt.initConfig
 		pkg: grunt.file.readJSON "package.json"
-		bumpup: "package.json"
-		tagrelease: "package.json"
+		release: 
+			options:
+				additionalFiles: ["package.json"]
 
 	# plugins
-	grunt.loadNpmTasks "grunt-bumpup"
-	grunt.loadNpmTasks "grunt-tagrelease"
+	grunt.loadNpmTasks "grunt-release"
+
+	# консоль, опубликовать релиз: grunt release
 
 	# tasks
 	grunt.registerTask "default", ->
@@ -66,11 +68,3 @@ function <%= className %>(){};\n
 
 
 		console.log "done"
-
-
-
-	
-	grunt.registerTask "release", (type) ->
-		type = "patch" if not type?
-		grunt.task.run "bumpup:" + type
-		grunt.task.run "tagrelease"
