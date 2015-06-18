@@ -20,8 +20,8 @@ app.component require "derby-entypo/social/md-icon-youtube"
 
 Use pictograms within templates: 
 ```html
-<view is="md-air" size="60" />
-<view is="md-youtube" />
+<view is="md-icon-air" size="60" />
+<view is="md-icon-youtube" />
 ```
 
 
