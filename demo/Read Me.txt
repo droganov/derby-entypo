@@ -1,7 +1,0 @@
-The *SVG* folder contains the icons you selected as separate SVG files.
-
-The *demo.html* lists the icons that you selected. To learn how to insert your icons as inline SVGs (with the <use> element), refer to the source of this HTML file. If you prefer to reference an external SVG instead of embedding it in the HTML, you can use IcoMoon's Quick Usage mode available in the SVG tab of the app.
-
-You can ignore the *svgdefs.svg* file. It contains the same SVG <symbol> definitions as the ones you can find in the demo.html file.
-
-If you prefer using PNGs or CSS sprites, refer to the Preferences panel of the IcoMoon app before downloading your zip pack.
