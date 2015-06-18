@@ -14,14 +14,14 @@ app.use require "derby-entypo"
 
 Connect pictograms (each individually)
 ```coffeescript
-app.component require "derby-entypo/entypo/air"
-app.component require "derby-entypo/social/youtube"
+app.component require "derby-entypo/entypo/md-icon-air"
+app.component require "derby-entypo/social/md-icon-youtube"
 ```
 
 Use pictograms within templates: 
 ```html
 <view is="md-air" size="60" />
-<view is="md-youtube" size="60" />
+<view is="md-youtube" />
 ```
 
 
@@ -35,7 +35,6 @@ Use pictograms within templates:
 ## Copyright information
 - Pictorgam design [Daniel Bruce](//entypo.com/)
 - Component coding [Serge Droganov](//droganov.ru)
-- Demo [Iconmoon](//icomoon.io)
 
 ---
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/droganov/derby-entypo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)

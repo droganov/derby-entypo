@@ -1,3 +1,0 @@
-module.exports = MDVkAlternitive;
-function MDVkAlternitive(){};
-MDVkAlternitive.prototype.view = __filename.replace(/.[^.]+$/, "");

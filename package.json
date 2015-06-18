@@ -1,33 +1,34 @@
 {
   "name": "derby-entypo",
-  "description": "",
-  "version": "0.0.8",
-  "main": "./index.js",
+  "version": "0.0.9",
+  "description": "Entypo pictogram set for derby.js framework",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "grunt": "^0.4.5",
+    "cheerio": "^0.17.0",
+    "grunt-tagrelease": "^0.3.3",
+    "grunt-bumpup": "^0.6.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/droganov/derby-entypo.git"
+  },
   "keywords": [
     "derby",
     "derby-component",
     "entypo",
     "icons",
-    "svg"
+    "derby.js"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/droganov/derby-entypo.git"
+  "author": "Serge Droganov",
+  "license": "CC-BY-3.0",
+  "bugs": {
+    "url": "https://github.com/droganov/derby-entypo/issues"
   },
-  "scripts": {
-    "test": "echo 'No tests yet!'; exit(1);"
-  },
-  "author": {
-    "name": "Serge Droganov",
-    "email": "serge@droganov.ru"
-  },
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {
-    "cheerio": "^0.17.0",
-    "coffee-script": "^1.8.0",
-    "grunt": "^0.4.5",
-    "grunt-bumpup": "^0.6.2",
-    "grunt-tagrelease": "^0.3.3"
-  }
+  "homepage": "https://github.com/droganov/derby-entypo#readme"
 }

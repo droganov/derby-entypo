@@ -1,3 +1,0 @@
-module.exports = MDInbox;
-function MDInbox(){};
-MDInbox.prototype.view = __filename.replace(/.[^.]+$/, "");

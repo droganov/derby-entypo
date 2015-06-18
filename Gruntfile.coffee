@@ -20,10 +20,10 @@ module.exports = (grunt) ->
 		# шаблоны
 		tjs = 'module.exports = <%= className %>;\n
 function <%= className %>(){};\n
-<%= className %>.prototype.view = "md-" + __filename.replace(/\.[^\.]+$/, "");\n'
+<%= className %>.prototype.view = __dirname;\n'
 
 		thtml = '<index:>\n
-<svg class="md-icon md-icon-<%= name %>" viewBox="<%= viewbox %>" width="{{ @size || 20 }}" height="{{ @size || 20}}" x="<%= x %>" y="<%= y %>"><path d="<%= path %>" /></svg>'
+	<svg class="md-icon md-icon-<%= name %>" viewBox="<%= viewbox %>" class="{{ @class }}" width="{{ @size || 20 }}" height="{{ @size || 20}}" x="<%= x %>" y="<%= y %>"><path d="<%= path %>" /></svg>'
 
 		# чистим
 		try
@@ -57,12 +57,12 @@ function <%= className %>(){};\n
 			filehtml 		= grunt.template.process thtml, {data: d}
 
 			newDirName = if file.indexOf("Entypo+ Social Extension") is -1 then "entypo" else "social"
-			newDirPath = newDirName + "/" + d.name
+			newDirPath = newDirName + "/md-icon-" + d.name
 
 			grunt.file.mkdir newDirPath
 
-			grunt.file.write newDirPath + "/md-" + d.name + ".js", filejs
-			grunt.file.write newDirPath + "/md-" + d.name + ".html", filehtml
+			grunt.file.write newDirPath + "/index.js", filejs
+			grunt.file.write newDirPath + "/index.html", filehtml
 
 
 		console.log "done"
