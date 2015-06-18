@@ -1,6 +1,4 @@
 .entypo {
-	display: inline-block;
-	vertical-align: middle;
-	color: rgba(#000, .87);
+	color: inherit;
 	fill: currentColor;
 }
