@@ -7,38 +7,6 @@ npm install derby-entypo
 ```
 
 ## Usage
-There is two usage strategies:
-
-1. Sprite — when it's OK to add 200KB (65 zipped) to the bundle
-2. Inline — when it's OK to `require` each icon manualy
-
-### 1 Sprite
-Connect the component
-```coffeescript
-app.use require "derby-entypo/sprite"
-```
-
-Include the sprite
-```html
-<Body:>
-	<entypo-sprite />
-```
-
-Use pictograms within templates: 
-```html
-<entypo icon="air" size="60" />
-```
-
-or
-```html
-<entypo icon="brush" />
-```
-
-
-Default pictogram size is 20×20px. You can find pictogram names in demo/demo.html 
-
-
-### 2 Inline
 Connect styles
 ```coffeescript
 app.use require "derby-entypo"
@@ -46,19 +14,16 @@ app.use require "derby-entypo"
 
 Connect pictograms (each individually)
 ```coffeescript
-app.component require "derby-entypo/inline/air"
-app.component require "derby-entypo/inline/airplane"
+app.component require "derby-entypo/entypo/air"
+app.component require "derby-entypo/social/youtube"
 ```
 
 Use pictograms within templates: 
 ```html
-<entypo-air size="60" />
-<entypo-airplane />
+<view is="md-air" size="60" />
+<view is="md-youtube" size="60" />
 ```
 
-## Resources
-Sublime text code completions are in `sublime-completions` folder
-Sketch 3 resource file is in `sketch 3 symbols`folder
 
 ## see also:
 - [Official Components Guide](https://github.com/codeparty/derby/blob/master/docs/guides/components.md)
