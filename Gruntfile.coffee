@@ -20,7 +20,7 @@ module.exports = (grunt) ->
 		# шаблоны
 		tjs = 'module.exports = <%= className %>;\n
 function <%= className %>(){};\n
-<%= className %>.prototype.view = __filename.replace(/\.[^\.]+$/, "");\n'
+<%= className %>.prototype.view = "md-" + __filename.replace(/\.[^\.]+$/, "");\n'
 
 		thtml = '<index:>\n
 <svg class="md-icon md-icon-<%= name %>" viewBox="<%= viewbox %>" width="{{ @size || 20 }}" height="{{ @size || 20}}" x="<%= x %>" y="<%= y %>"><path d="<%= path %>" /></svg>'
@@ -61,8 +61,8 @@ function <%= className %>(){};\n
 
 			grunt.file.mkdir newDirPath
 
-			grunt.file.write newDirPath + "/" + d.name + ".js", filejs
-			grunt.file.write newDirPath + "/" + d.name + ".html", filehtml
+			grunt.file.write newDirPath + "/md-" + d.name + ".js", filejs
+			grunt.file.write newDirPath + "/md-" + d.name + ".html", filehtml
 
 
 		console.log "done"
