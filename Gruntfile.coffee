@@ -25,7 +25,7 @@ function <%= className %>(){};\n
 <%= className %>.prototype.view = __dirname;\n'
 
 		thtml = '<index:>\n
-	<svg class="md-icon md-icon-<%= name %> {{ @class }}" viewBox="<%= viewbox %>" width="{{ @size || 20 }}" height="{{ @size || 20}}" x="<%= x %>" y="<%= y %>"><path d="<%= path %>" /></svg>'
+	<svg class="md-icon md-icon--<%= name %> {{ @class }}" viewBox="<%= viewbox %>" width="{{ @size || 20 }}" height="{{ @size || 20}}" x="<%= x %>" y="<%= y %>"><path d="<%= path %>" /></svg>'
 
 		# чистим
 		try
@@ -50,7 +50,7 @@ function <%= className %>(){};\n
 				className	: "MD" + toTitleCase(fileName.replace(/\-/g, " ")).split(" ").join("")
 				viewbox 	: svgObj.attr "viewbox"
 				path 		: pathObj.attr "d"
-				name 		: fileName.split(" ").join("-")
+				name 		: fileName.split(" ").join("-").toLowerCase()
 				x 			: svgObj.attr "x"
 				y 			: svgObj.attr "y"
 
