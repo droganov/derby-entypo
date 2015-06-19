@@ -1,6 +1,6 @@
 {
   "name": "derby-entypo",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Entypo pictogram set for derby.js framework",
   "main": "index.js",
   "dependencies": {},
