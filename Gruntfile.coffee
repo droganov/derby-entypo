@@ -25,7 +25,7 @@ function <%= className %>(){};\n
 <%= className %>.prototype.view = __dirname;\n'
 
 		thtml = '<index:>\n
-	<svg class="md-icon md-icon-<%= name %>" viewBox="<%= viewbox %>" class="{{ @class }}" width="{{ @size || 20 }}" height="{{ @size || 20}}" x="<%= x %>" y="<%= y %>"><path d="<%= path %>" /></svg>'
+	<svg class="md-icon md-icon-<%= name %> {{ @class }}" viewBox="<%= viewbox %>" width="{{ @size || 20 }}" height="{{ @size || 20}}" x="<%= x %>" y="<%= y %>"><path d="<%= path %>" /></svg>'
 
 		# чистим
 		try
